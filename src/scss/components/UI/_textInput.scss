@@ -1,0 +1,13 @@
+.textInput {
+    height: 2.4em;
+    padding: 0.4em;
+    border: 1px solid $clr-300;
+    &:focus {
+        outline: none;
+        border: 1px solid $clr-accent-400;
+    }
+    &:hover {
+        border: 1px solid $clr-accent-400;
+    }
+}
+

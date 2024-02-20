@@ -1,0 +1,30 @@
+.login {
+    height: 100vh;
+    @include flex-center;   
+}
+
+.login__pannel {
+    $max-width: 35em;
+    $padding: 1rem;
+
+    width: min($max-width, 100% - $padding*2);
+    padding: 7em;
+    @include flex-col;
+    gap: 2em;
+    box-shadow: 3px 3px 17px -5px $clr-dark;
+
+    form {
+        @include flex-col;
+        gap: 1.3em;
+
+        button {
+            margin-top: 1em;
+        }
+    }
+
+    p {
+        opacity: 0.6;
+    }
+}
+
+    

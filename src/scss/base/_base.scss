@@ -1,0 +1,81 @@
+$clr-dark: #0f0f0f;
+$clr-light: rgb(255, 255, 255);
+$clr-800: #262626;
+$clr-500: #737373;
+$clr-300: #d4d4d4;
+$clr-shadow: #888686;
+
+$clr-accent-200: #fed7aa;
+$clr-accent-400: #fb923c; 
+$clr-accent-700: #c2410c;
+$clr-accent-900: #7c2d12;
+
+/* Fonts */
+$ff-primary: "Poppins", sans-serif;
+
+$ff-body: $ff-primary;
+$ff-heading: $ff-primary;
+
+$fw-regular: 400;
+$fw-bold: 600;
+
+$fs-xs: 0.75rem;
+$fs-sm: 0.875rem;
+$fs-base: 1rem;
+$fs-lg: 1.125rem;
+$fs-xl: 1.25rem;
+$fs-2xl: 1.5rem;
+$fs-3xl: 1.875rem;
+$fs-4xl: 2.25rem;
+$fs-5xl: 3rem;
+$fs-6xl: 3.75rem;
+
+$fs-body: clamp($fs-sm, 1.1vw, $fs-base);
+$fs-heading: $fs-2xl;
+$fs-subheading: clamp($fs-base, 1.1vw, $fs-lg);
+$fs-nav: clamp($fs-xs, 1vw, $fs-sm);
+$fs-button: $fs-sm;
+$fs-title: clamp($fs-4xl, 2.5vw, $fs-6xl);
+
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font: inherit;
+}
+  
+ul[role="list"], 
+ol[role="list"]{
+    list-style: none;
+}
+  
+a {
+    text-decoration: none;
+}
+
+html:focus-within {
+    scroll-behavior: smooth;
+}
+
+html, 
+body {
+    height: 100%;
+}
+
+body {
+    text-rendering: optimizeSpeed; 
+    background-color: $clr-light;
+}
+
+img, 
+picture, 
+svg{
+    max-width: 100%;
+    display: block;
+}
+
+/* Basic styles */
+body {
+    font-family: $ff-body;
+    line-height: 1.5;
+}

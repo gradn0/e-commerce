@@ -1,0 +1,12 @@
+.btn {
+    width: 6em;
+    padding: 0.5em;
+    background-color: $clr-accent-400;
+    color: $clr-dark;
+    border: 2px solid $clr-light;
+
+    &:hover {
+        background-color: $clr-light;
+        border: 2px solid $clr-accent-400;
+    }
+}
