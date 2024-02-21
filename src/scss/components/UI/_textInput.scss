@@ -1,7 +1,8 @@
-.textInput {
+.text-input {
     height: 2.4em;
     padding: 0.4em;
     border: 1px solid $clr-300;
+    border-radius: 5px;
     &:focus {
         outline: none;
         border: 1px solid $clr-accent-400;

@@ -1,0 +1,7 @@
+.sidebarlink {
+    padding: 0.5em 2em;
+    cursor: pointer;
+    &:hover {
+        background-color: $clr-300;
+    }
+}

@@ -1,16 +1,28 @@
-import { createBrowserRouter, Router, RouterProvider} from "react-router-dom" 
-import HomePage from "./pages/HomePage"
+import { createBrowserRouter, RouterProvider} from "react-router-dom" 
+
+import './scss/index.scss'
+
 import ErrorBoundary from "./pages/ErrorBoundary"
 import LoginPage from "./pages/LoginPage"
-import './scss/index.scss'
 import RegisterPage from "./pages/RegisterPage"
+import Listings from "./components/Listings"
+import MainLayout from "./layouts/MainLayout"
+import Categories from "./components/Categories"
 
 function App() {
   const router = createBrowserRouter([
     {
-      path: '/',
-      element: <HomePage />,
-      errorElement: <ErrorBoundary />
+      path: '/', 
+      element: <MainLayout left={Categories} right={Listings} />,
+      errorElement: <ErrorBoundary />,
+    },
+    {
+      path: '/category',
+      element:<MainLayout left={Categories} right={Listings} />,
+    },
+    {
+      path: '/category/:category',
+      element:<MainLayout left={Categories} right={Listings} />,
     },
     {
       path: '/login',
