@@ -5,7 +5,7 @@ import './scss/index.scss'
 import ErrorBoundary from "./pages/ErrorBoundary"
 import LoginPage from "./pages/LoginPage"
 import RegisterPage from "./pages/RegisterPage"
-import Listings from "./components/Listings"
+import Listing from "./components/Listing"
 import MainLayout from "./layouts/MainLayout"
 import Categories from "./components/Categories"
 
@@ -13,16 +13,16 @@ function App() {
   const router = createBrowserRouter([
     {
       path: '/', 
-      element: <MainLayout left={Categories} right={Listings} />,
+      element: <MainLayout left={Categories} right={Listing} />,
       errorElement: <ErrorBoundary />,
     },
     {
       path: '/category',
-      element:<MainLayout left={Categories} right={Listings} />,
+      element:<MainLayout left={Categories} right={Listing} />,
     },
     {
       path: '/category/:category',
-      element:<MainLayout left={Categories} right={Listings} />,
+      element:<MainLayout left={Categories} right={Listing} />,
     },
     {
       path: '/login',

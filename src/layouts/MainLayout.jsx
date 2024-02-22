@@ -9,7 +9,7 @@ const MainLayout = ({
   return (
     <>
         <Header />
-        <div className='container' style={{display: 'flex'}}>
+        <div className='container' style={{display: 'flex', padding: '2em'}}>
             <div style={{flex: 1}}>
                 <Side />
             </div>

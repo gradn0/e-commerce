@@ -8,3 +8,10 @@
     font-size: $fs-body;
     color: $clr-dark;
 }
+
+.layout-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(18em, 1fr));
+    justify-content: center;
+    gap: 1em;
+}
