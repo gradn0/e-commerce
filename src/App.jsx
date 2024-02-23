@@ -5,24 +5,29 @@ import './scss/index.scss'
 import ErrorBoundary from "./pages/ErrorBoundary"
 import LoginPage from "./pages/LoginPage"
 import RegisterPage from "./pages/RegisterPage"
-import Listings from "./components/Listings"
+import ListingPage from "./pages/ListingPage"
 import MainLayout from "./layouts/MainLayout"
 import Categories from "./components/Categories"
+import ProductPage from "./pages/ProductPage"
 
 function App() {
   const router = createBrowserRouter([
     {
       path: '/', 
-      element: <MainLayout left={Categories} right={Listings} />,
+      element: <MainLayout left={Categories} right={ListingPage} />,
       errorElement: <ErrorBoundary />,
     },
     {
       path: '/category',
-      element:<MainLayout left={Categories} right={Listings} />,
+      element:<MainLayout left={Categories} right={ListingPage} />,
     },
     {
       path: '/category/:category',
-      element:<MainLayout left={Categories} right={Listings} />,
+      element:<MainLayout left={Categories} right={ListingPage} />,
+    },
+    {
+      path: '/product/:productId',
+      element:<MainLayout left={Categories} right={ProductPage} />,
     },
     {
       path: '/login',
