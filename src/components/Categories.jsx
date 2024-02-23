@@ -1,20 +1,13 @@
-import React, { useEffect, useState } from 'react'
 import SideBarLink from './UI/SideBarLink'
 import { NavLink } from 'react-router-dom';
-import fetchFromApi from '../utils/fetchFromApi';
+import useFetch from '../utils/useFetch';
 
 const Categories = () => {
-  const [categories, setCategories] = useState(() => []);
-  useEffect(() => {
-    const fetchCategories = async () => {
-      fetchFromApi('categories')
-        .then(data => setCategories(data));
-    }
-    fetchCategories();
-  }, [])
+  const categories = useFetch('categories');
+
   return (
     <ul>
-        {categories.map(category => <NavLink style={{color: 'var(--clr-dark)'}} to={`/category/${category}`}><SideBarLink label={category}/></NavLink>)}
+        {categories && categories.map(category => <NavLink key={category} to={`/category/${category}`}><SideBarLink label={category}/></NavLink>)}
     </ul>
   )
 }

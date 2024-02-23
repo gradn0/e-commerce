@@ -8,15 +8,17 @@ const MainLayout = ({
 }) => {
   return (
     <>
+    <div style={{height: '12vh'}}>
         <Header />
-        <div className='container' style={{display: 'flex', padding: '2em'}}>
-            <div style={{flex: 1}}>
-                <Side />
-            </div>
-            <div style={{flex: 5}}>
-                <Main />
-            </div>
+    </div>   
+    <div style={{display: 'flex', height: '88vh'}}>
+        <div style={{flex: 1, overflowY: 'scroll'}}>
+            <Side />
         </div>
+        <div style={{flex: 4, padding: '2em', overflowY: 'scroll'}}>
+            <Main />
+        </div>
+    </div>
     </>
   )
 }

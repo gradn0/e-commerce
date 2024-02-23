@@ -6,11 +6,14 @@
 @import './components/UI/button';
 @import './components/UI/textInput';
 @import './components/UI/sidebarLink';
-@import './components/header';
+
+/* Pages */
+@import './pages/loginpage';
+@import './pages/registerpage';
+@import './pages/productpage';
 
 /* Components */
-@import './components/login';
-@import './components/register';
-@import './components/productCard';
+@import './components/header';
+@import './components/productcard'
 
 

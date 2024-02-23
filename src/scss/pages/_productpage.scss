@@ -1,0 +1,15 @@
+.productpage {
+    display: flex;
+    flex-direction: column;
+}
+.productpage__top {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(20em, 1fr));
+    justify-content: center;
+    gap: 1em;
+}
+
+.productpage__images {
+    @include flex-center;
+    border: 1px solid black;
+}

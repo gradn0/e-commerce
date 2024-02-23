@@ -2,7 +2,7 @@ import React from 'react'
 
 const Logo = () => {
   return (
-    <div>
+    <div style={{cursor: 'pointer'}}>
         <h1>E-Commerce</h1>
     </div>
   )

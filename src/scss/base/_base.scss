@@ -49,13 +49,14 @@ $fs-title: clamp($fs-4xl, 2.5vw, $fs-6xl);
     font: inherit;
 }
   
-ul[role="list"], 
-ol[role="list"]{
+ul, 
+ol{
     list-style: none;
 }
   
 a {
     text-decoration: none;
+    color: $clr-dark;
 }
 
 html:focus-within {
