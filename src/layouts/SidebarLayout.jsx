@@ -2,7 +2,7 @@ import React from 'react'
 import Header from '../components/Header'
 
 
-const MainLayout = ({
+const SidebarLayout = ({
     left: Side, 
     right: Main,
 }) => {
@@ -23,4 +23,4 @@ const MainLayout = ({
   )
 }
 
-export default MainLayout
+export default SidebarLayout

@@ -7,11 +7,14 @@
 @import './components/UI/textInput';
 @import './components/UI/sidebarLink';
 @import './components/UI/purchasecount';
+@import './components/UI/basketicon';
+@import './components/UI/basketItem';
 
 /* Pages */
 @import './pages/loginpage';
 @import './pages/registerpage';
 @import './pages/productpage';
+@import './pages/basketpage';
 
 /* Components */
 @import './components/header';

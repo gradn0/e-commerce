@@ -4,7 +4,6 @@ import { useDispatch, useSelector } from 'react-redux'
 import { addProduct, incrementCount } from '../state/basket/basketSlice';
 
 const AddToBasket = ({product}) => {
-
     const basket = useSelector(state => state.basket.products);
     const dispatch = useDispatch();
 
@@ -19,7 +18,7 @@ const AddToBasket = ({product}) => {
 
   return (
     <div>
-        <Counter onRequestValue={count => appendBasket(count)} submit={true} submitText={'Add to Basket'}/>  
+        <Counter onRequestValue={count => appendBasket(count)} defaultValue={1} submit={true} submitText={'Add to Basket'}/>  
     </div>
   )
 }

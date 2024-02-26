@@ -12,7 +12,7 @@ const Header = () => {
         <SearchBar />
         <ul className='header__links' style={{display: 'flex', gap: '2em'}}>
           <ProfileIcon />
-          <BasketIcon />
+          <Link to={'/basket'}><BasketIcon /></Link>
         </ul>
     </div>
   )

@@ -6,28 +6,30 @@ import ErrorBoundary from "./pages/ErrorBoundary"
 import LoginPage from "./pages/LoginPage"
 import RegisterPage from "./pages/RegisterPage"
 import ListingPage from "./pages/ListingPage"
-import MainLayout from "./layouts/MainLayout"
+import SidebarLayout from "./layouts/SidebarLayout"
 import Categories from "./components/Categories"
 import ProductPage from "./pages/ProductPage"
+import BasketPage from "./pages/BasketPage"
+import MonoLayout from "./layouts/MonoLayout"
 
 function App() {
   const router = createBrowserRouter([
     {
       path: '/', 
-      element: <MainLayout left={Categories} right={ListingPage} />,
+      element: <SidebarLayout left={Categories} right={ListingPage} />,
       errorElement: <ErrorBoundary />,
     },
     {
       path: '/category',
-      element:<MainLayout left={Categories} right={ListingPage} />,
+      element:<SidebarLayout left={Categories} right={ListingPage} />,
     },
     {
       path: '/category/:category',
-      element:<MainLayout left={Categories} right={ListingPage} />,
+      element:<SidebarLayout left={Categories} right={ListingPage} />,
     },
     {
       path: '/product/:productId',
-      element:<MainLayout left={Categories} right={ProductPage} />,
+      element:<SidebarLayout left={Categories} right={ProductPage} />,
     },
     {
       path: '/login',
@@ -36,6 +38,10 @@ function App() {
     {
       path: '/register',
       element: <RegisterPage />,
+    },
+    {
+      path: '/basket',
+      element: <MonoLayout><BasketPage /></MonoLayout>
     }
   ])
 

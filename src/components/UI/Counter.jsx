@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 
-const Counter = ({onRequestValue, submit, submitText}) => {
-    const [count, setCount] = useState(0);
+const Counter = ({onRequestValue, submit, submitText, defaultValue}) => {
+    const [count, setCount] = useState(defaultValue);
 
     const increment = () => {
         setCount((prev) => prev+1);
@@ -13,7 +13,7 @@ const Counter = ({onRequestValue, submit, submitText}) => {
 
     const handleSubmit = () => {
       onRequestValue(count);
-      setCount(0);
+      setCount(defaultValue);
     }
 
   return (

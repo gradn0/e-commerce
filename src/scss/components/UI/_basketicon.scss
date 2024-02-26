@@ -1,0 +1,17 @@
+.basketIcon {
+    position: relative;
+    cursor: pointer;
+}
+
+.basketCounter {
+    width: 1.2em;
+    height: 1.2em;
+    background: $clr-accent-400;
+    border-radius: 50%;
+    @include flex-center;
+    font-size: $fs-xs;
+    padding: 0.7em;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
