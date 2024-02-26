@@ -16,3 +16,8 @@
     width: min($max-container-width, 100% - $container-padding*2);
     margin-inline: auto;
 }
+
+@mixin size-fill {
+    width: 100%;
+    height: 100%;
+}

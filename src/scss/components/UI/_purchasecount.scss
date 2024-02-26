@@ -1,0 +1,27 @@
+.purchasecount {
+    @include flex-center;
+    border: 1px solid $clr-300;
+    border-radius: 0.3em;
+    width: 8em;
+
+    .seperator {
+        border-left: 1px solid $clr-300;
+        height: 60%;
+        margin: 0 0.2em;
+    }
+
+    .count {
+        width: 8em;
+        @include flex-center
+    }
+
+    button {
+        border: none;
+        border-radius: 0.3em;
+        background: $clr-light;
+        cursor: pointer;
+        @include size-fill;
+        padding: 0.2em;
+        color: $clr-500;
+    }
+}

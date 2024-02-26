@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 import useFetch from '../utils/useFetch';
+import ImageSlider from '../components/ImageSlider';
+import AddToBasket from '../components/AddToBasket';
 
 const ProductPage = () => {
     const params = useParams();
@@ -11,13 +13,15 @@ const ProductPage = () => {
   return (
     <div className='productpage'>
         <div className="productpage__top">
-            <div className="productpage__images">
-                <img src={product.thumbnail} alt="" />
-            </div>
-            <div className="productpage__info">2</div>
+          <ImageSlider product={product}/>
+          <div className="productpage__info">
+            <h1 className='text-heading'>{product.title}</h1>
+            <p className='text-body'>{product.rating}/5 Stars</p>
+            <p className='text-body'>{product.description}</p>
+            <p className='text-heading'>{'\u00a3'}{product.price}</p>
+            <AddToBasket product={product}/>
+          </div>
         </div>
-        <p className="productpage__description">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsum sint officiis iure labore eius alias quae deserunt cumque exercitationem! 
-        Optio consequatur commodi libero perspiciatis quo voluptate tempora, fugiat ad porro.</p>
     </div>
   )
 }

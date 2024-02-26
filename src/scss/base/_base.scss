@@ -36,7 +36,7 @@ $fs-5xl: 3rem;
 $fs-6xl: 3.75rem;
 
 $fs-body: clamp($fs-sm, 1.1vw, $fs-base);
-$fs-heading: $fs-2xl;
+$fs-heading: clamp($fs-xl, 1.5vw, $fs-2xl);
 $fs-subheading: clamp($fs-base, 1.1vw, $fs-lg);
 $fs-nav: clamp($fs-xs, 1vw, $fs-sm);
 $fs-button: $fs-sm;

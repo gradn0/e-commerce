@@ -1,0 +1,47 @@
+.imageslider {
+    @include flex-col;
+    align-items: center;
+    gap: 2em;
+}
+
+.imageslider__current {
+    width: minmax(auto, 30em);
+    height: 30em;
+    border: 1px solid $clr-300;
+    border-radius: 0.3em;
+    img {
+        @include size-fill;
+        transform: scale(0.8);
+        object-fit: contain;
+    }
+}
+
+.imageslider__preview {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    gap: 1em;
+    list-style: none;
+    flex-wrap: wrap;
+
+    li {
+        border: 1px solid $clr-300;
+        width: clamp(4em, 6em, 7em);
+        height: clamp(4em, 6em, 7em);
+        @include flex-center;
+        border: 1px solid $clr-300;
+        border-radius: 0.3em;
+        padding: 0.5em;
+        cursor: pointer;
+        transition: all 0.03s;
+
+        &:hover {
+            border: 1px solid $clr-500;
+        }
+
+        img {
+            @include size-fill;
+            object-fit: contain;
+        }
+    }
+}
