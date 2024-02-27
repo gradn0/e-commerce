@@ -32,6 +32,13 @@
 
 .basketitem__counter {
     margin-left: auto;
-    @include flex-col;
+    display: flex;
+    align-items: center;
     gap: 0.5em;
+    font-size: $fs-sm;
+
+    input {
+        width: 2em;
+        text-align: center;
+    }
 }

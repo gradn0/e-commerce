@@ -1,14 +1,20 @@
 .basketpage {
     @include container;
-    display: flex;
+    display: grid;
+    justify-content: center;
+    gap: 1em;
+    grid-template-columns: repeat(auto-fill, minmax(30em, 1fr));
+
+    h1 {
+        margin-bottom: 1em;
+    }
 }
 
-.basketpage__products {
+.basketpage__products-list {
     @include flex-col;
     gap: 1em;
-    flex: 2;
 }
 
 .basketpage__summary {
-    flex: 1;
-}
+    max-width: 20em; 
+} 

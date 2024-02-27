@@ -1,0 +1,19 @@
+.checkoutsummary {
+    border: 1px solid $clr-300;
+    padding: 1em;
+    @include flex-col;
+    gap: 1em;
+
+    button {
+        max-width: 10em
+    }
+}
+
+.checkoutsummary__contribution {
+    font-size: $fs-sm;
+}
+
+.checkoutsummary__total {
+    font-size: $fs-lg;
+    font-weight: $fw-bold;
+}

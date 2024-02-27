@@ -1,6 +1,6 @@
 import React from 'react'
 import Logo from './UI/Logo'
-import SearchBar from './UI/SearchBar'
+import SearchBar from './SearchBar'
 import ProfileIcon from './UI/ProfileIcon'
 import BasketIcon from './UI/BasketIcon'
 import { Link } from 'react-router-dom'

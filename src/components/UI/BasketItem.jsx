@@ -1,8 +1,17 @@
 import React from 'react'
 
-const BasketItem = ({product, deleteItem}) => {
+const BasketItem = ({product, deleteItem, updateCount}) => {
     const item = product.product;
     const quantity = product.count;
+
+    const validateInput = (input) => {
+        for (let i=0; i<input.length; i++) {
+            if (input[i].charCodeAt(0) < 48 || input[i].charCodeAt(0) > 57) {
+                return;
+            } 
+        }  
+        updateCount(Number(input));    
+    }
 
   return (
     <div className='basketitem'>
@@ -15,7 +24,11 @@ const BasketItem = ({product, deleteItem}) => {
             <p onClick={deleteItem} className='basketitem__details-remove'>Delete</p>
         </div>
         <div className="basketitem__counter">
-            <p>Quantity: {quantity}</p>
+            <p>Quantity: </p>
+            <input className='text-input' type="text"
+                placeholder={quantity} 
+                onChange={(e) => validateInput(e.target.value)}   
+            />
         </div>
         
     </div>
