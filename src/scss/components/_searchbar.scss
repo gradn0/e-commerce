@@ -1,0 +1,12 @@
+.searchbar__results {
+    transform: translateY(0.5em);
+}
+
+.searchbar__result {
+    width: 27ch;
+    padding: 0.2em;
+    transition: all 0.03s;
+    &:hover {
+        background-color: $clr-300;
+    }
+}
