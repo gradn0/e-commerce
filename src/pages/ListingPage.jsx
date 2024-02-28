@@ -1,5 +1,5 @@
 import { Link, useParams } from 'react-router-dom'
-import useFetch from '../utils/useFetch';
+import useFetch from '../hooks/useFetch';
 import ProductCard from '../components/ProductCard';
 
 const ListingPage = () => {

@@ -2,6 +2,9 @@
 @import './base/mixins';
 @import './base/utils';
 
+/* Layouts */
+@import './layouts/sidebarlayout';
+
 /* UI */
 @import './components/UI/button';
 @import './components/UI/textInput';

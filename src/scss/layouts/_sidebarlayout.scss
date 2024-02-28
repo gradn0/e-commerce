@@ -1,0 +1,29 @@
+.sidebarlayout__header {
+    height: 12vh;
+}
+
+.sidebarlayout__container {
+    display: flex;
+    height: 88vh;
+    position: relative;
+}
+
+.sidebarlayout__side {
+    flex: 1;
+    overflow-y: scroll;
+}
+
+.sidebarlayout__main {
+    flex: 4;
+    padding: 2em;
+    overflow-y: scroll;
+}
+
+.sidebarlayout__mobilesidebar {
+    position: absolute;
+    left: 0;
+    top: 12vh;
+    height: 88vh;
+    overflow-y: scroll;
+    background-color: white;
+}

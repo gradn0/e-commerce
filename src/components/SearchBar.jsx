@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import useFetch from '../utils/useFetch';
+import useFetch from '../hooks/useFetch';
 import ModalLayout from '../layouts/ModalLayout';
 import { Link } from 'react-router-dom';
 

@@ -1,26 +1,37 @@
-import React from 'react'
+import { useState } from 'react';
 import Header from '../components/Header'
-
+import Media from 'react-media';
 
 const SidebarLayout = ({
     left: Side, 
     right: Main,
 }) => {
-  return (
-    <>
-    <div style={{height: '12vh'}}>
-        <Header />
-    </div>   
-    <div style={{display: 'flex', height: '88vh'}}>
-        <div style={{flex: 1, overflowY: 'scroll'}}>
+    const [mobileSideOpen, setMobileSideOpen] = useState(false);
+
+    console.log(mobileSideOpen);
+
+    return (
+        <>
+        <div className='sidebarlayout__header'>
+            <Header toggleSidebar={() => setMobileSideOpen(!mobileSideOpen)}/>
+        </div>
+        <div className='sidebarlayout__container'>
+            <Media query='(min-width: 70em)' render={() =>  
+                (
+                    <div className='sidebarlayout__side'>
+                        <Side />
+                    </div>
+                )} 
+            />
+            <div className='sidebarlayout__main'>
+                <Main />
+            </div>
+        </div>
+        {mobileSideOpen && <div className="sidebarlayout__mobilesidebar">
             <Side />
-        </div>
-        <div style={{flex: 4, padding: '2em', overflowY: 'scroll'}}>
-            <Main />
-        </div>
-    </div>
-    </>
-  )
+        </div>}
+        </>
+    )
 }
 
 export default SidebarLayout
