@@ -10,7 +10,7 @@ const BasketPage = () => {
     const dispatch = useDispatch();
 
   return (
-    <div className="basketpage">
+    <div className="basketpage | container">
       <div className="basketpage__products">
         
         <h1 className='text-heading'>Your Basket</h1>

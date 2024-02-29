@@ -6,6 +6,7 @@ import { Link } from 'react-router-dom'
 import MobileMenuIcon from './UI/MobileMenuIcon'
 import Media from 'react-media'
 import SearchIcon from './UI/SearchIcon'
+import ModalLayout from '../layouts/ModalLayout'
 
 const Header = ({toggleSidebar}) => {
   const [searchBarOpen, setSearchBarOpen] = useState(false);
@@ -26,6 +27,15 @@ const Header = ({toggleSidebar}) => {
               </>
           )}
         </Media>
+
+        {searchBarOpen && 
+        <ModalLayout>
+          <div className="mobile-searchbar-container">
+            <div className="mobile-searchbar">
+                <SearchBar linkClicked={() => setSearchBarOpen(false)}/>
+              </div>
+          </div>
+        </ModalLayout>}
 
         <ul className='header__links' style={{display: 'flex', gap: '2em'}}>
           <Link to={'/basket'}><BasketIcon /></Link>

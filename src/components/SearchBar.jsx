@@ -3,12 +3,19 @@ import useFetch from '../hooks/useFetch';
 import ModalLayout from '../layouts/ModalLayout';
 import { Link } from 'react-router-dom';
 
-const SearchBar = () => {
+const SearchBar = ({linkClicked}) => {
   const [query, setQuery] = useState('');
   const [displayResults, setDisplayResults] = useState(false);
 
   const data = useFetch(`search?q=${query}&limit=10`);
   const results = data ? data.products : null;
+
+  if (!displayResults) linkClicked;
+
+  const handleClickLink = () => {
+    setDisplayResults(false);
+    linkClicked();
+  }
 
   const handleChange = (query) => {
     setQuery(query);
@@ -21,7 +28,7 @@ const SearchBar = () => {
         {query.length>0 && displayResults && (
         <div className='searchbar__results'>
           <ModalLayout>
-            {results.map(item => <div className="searchbar__result"><Link onClick={() => {setDisplayResults(false)}} key={item.id} to={`/product/${item.id}`}>{item.title}</Link></div>)}
+            {results.map(item => <div className="searchbar__result" key={item.id}><Link onClick={() => {handleClickLink()}} to={`/product/${item.id}`}>{item.title}</Link></div>)}
           </ModalLayout>
         </div>
         )}

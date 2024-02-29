@@ -15,13 +15,15 @@ const BasketItem = ({product, deleteItem, updateCount}) => {
 
   return (
     <div className='basketitem'>
-        <div className='basketitem__image'>
-            <img src={item.thumbnail} alt="" />
-        </div>
-        <div className='basketitem__details'>
-            <h2>{item.title}</h2>
-            <p>{'\u00a3'}{item.price}</p>
-            <p onClick={deleteItem} className='basketitem__details-remove'>Delete</p>
+        <div className="basketitem__left">
+            <div className='basketitem__image'>
+                <img src={item.thumbnail} alt="" />
+            </div>
+            <div className='basketitem__details'>
+                <h2>{item.title}</h2>
+                <p>{'\u00a3'}{item.price}</p>
+                <p onClick={deleteItem} className='basketitem__details-remove'>Delete</p>
+            </div>
         </div>
         <div className="basketitem__counter">
             <p>Quantity: </p>

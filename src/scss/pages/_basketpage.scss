@@ -1,9 +1,8 @@
 .basketpage {
-    @include container;
     display: grid;
     justify-content: center;
     gap: 1em;
-    grid-template-columns: repeat(auto-fill, minmax(30em, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(22em, 1fr));
 
     h1 {
         margin-bottom: 1em;

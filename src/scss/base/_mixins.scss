@@ -9,14 +9,6 @@
     flex-direction: column;
 }
 
-@mixin container {
-    $max-container-width: 1280px;
-    $container-padding: 1rem;
-
-    width: min($max-container-width, 100% - $container-padding*2);
-    margin-inline: auto;
-}
-
 @mixin size-fill {
     width: 100%;
     height: 100%;

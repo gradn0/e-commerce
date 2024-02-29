@@ -1,9 +1,22 @@
+.searchbar {
+    @include flex-center;
+    position: relative;
+
+    input {
+        width: 100%;
+    }
+}
+
 .searchbar__results {
     transform: translateY(0.5em);
+    z-index: 5;
+    position: absolute;
+    top: 100%;
+    left: 0;
 }
 
 .searchbar__result {
-    width: 27ch;
+    width: 30ch;
     padding: 0.2em;
     transition: all 0.03s;
     &:hover {

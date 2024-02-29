@@ -8,8 +8,6 @@ const SidebarLayout = ({
 }) => {
     const [mobileSideOpen, setMobileSideOpen] = useState(false);
 
-    console.log(mobileSideOpen);
-
     return (
         <>
         <div className='sidebarlayout__header'>

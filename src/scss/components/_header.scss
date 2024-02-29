@@ -3,4 +3,18 @@
     justify-content: space-between;
     align-items: center;
     padding: 2em 2em;
+    position: relative;
+}
+
+.mobile-searchbar-container {
+    position: absolute;
+    left: 0;
+    top: 2em;
+    width: 100vw;
+    @include flex-center;
+}
+
+.mobile-searchbar {
+    transform: translateX(-2em);
+    width: 20em;
 }
