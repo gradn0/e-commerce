@@ -8,25 +8,25 @@ import Media from 'react-media'
 import SearchIcon from './UI/SearchIcon'
 import ModalLayout from '../layouts/ModalLayout'
 
-const Header = ({toggleSidebar}) => {
+const Header = ({toggleSidebar, displayMobileMenu}) => {
   const [searchBarOpen, setSearchBarOpen] = useState(false);
 
   return (
     <div className='header'>
-        <Media query='(max-width: 70em)' render={() => <a onClick={toggleSidebar}><MobileMenuIcon style={{width: '1.5em', height: '1.5em', cursor: 'pointer'}}/></a>}/>
+        {displayMobileMenu && <Media query='(max-width: 70em)' render={() => <a onClick={toggleSidebar}><MobileMenuIcon style={{width: '1.5em', height: '1.5em', cursor: 'pointer'}}/></a>}/>}
         <Link to={'/'}><Logo /></Link>
 
-        <Media queries={{
+        {displayMobileMenu && <Media queries={{
             mobile: '(max-width: 592px)',
             desktop: '(min-width: 592px)',
         }}>
           {matches => (
               <>
                 {matches.desktop && <SearchBar />}
-                {!matches.desktop && <a onClick={() => setSearchBarOpen(true)}><SearchIcon style={{width: '1.5em', height: '1.5em', cursor: 'pointer'}}/></a>}
+                {!matches.desktop && <a onClick={() => setSearchBarOpen(!searchBarOpen)}><SearchIcon style={{width: '1.5em', height: '1.5em', cursor: 'pointer'}}/></a>}
               </>
           )}
-        </Media>
+        </Media>}
 
         {searchBarOpen && 
         <ModalLayout>

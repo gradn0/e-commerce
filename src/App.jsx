@@ -11,6 +11,12 @@ import Categories from "./components/Categories"
 import ProductPage from "./pages/ProductPage"
 import BasketPage from "./pages/BasketPage"
 import MonoLayout from "./layouts/MonoLayout"
+import CheckoutPage from "./pages/CheckoutPage"
+
+import AddressOptions from "./pages/checkout/AddressOptions";
+import PaymentOptions from "./pages/checkout/PaymentOptions";
+import PlaceOrder from "./pages/checkout/PlaceOrder";
+import CheckoutSuccessPage from "./pages/CheckoutSuccessPage"
 
 function App() {
   const router = createBrowserRouter([
@@ -42,6 +48,14 @@ function App() {
     {
       path: '/basket',
       element: <MonoLayout><BasketPage /></MonoLayout>
+    },
+    {
+      path: '/checkout',
+      element: <MonoLayout><CheckoutPage /></MonoLayout>,
+    },
+    {
+      path: '/checkout/success',
+      element: <MonoLayout><CheckoutSuccessPage /></MonoLayout>,
     }
   ])
 

@@ -1,0 +1,95 @@
+.checkoutpage{
+    margin-top: 1em;
+    font-size: $fs-body;
+}
+
+.checkoutpage__content {
+    margin-top: 2em;
+    display: flex;
+    flex-direction: column;
+    gap: 4em;
+}
+
+.checkoutpage__nav,
+.checkoutpage__right {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.checkoutpage__heading {
+    margin-bottom: 2em;
+}
+
+.checkoutpage__nav {
+    flex: 1;
+}
+
+.checkoutpage__right{
+    flex: 3;
+}
+
+.checkoutpage__nav-list {
+    @include flex-col;
+    align-items: start;
+    justify-content: start;
+    gap: 2em;
+}
+
+.checkoutpage__nav-link {
+    display: flex;
+    gap: 2em;
+    cursor: pointer;
+    @include flex-center;
+    transition: all 0.03s;
+
+    p {
+        color: $clr-500;
+    }
+
+    span {
+        $max-size: 4em;
+        width: clamp(2em, 5.2vw, $max-size);
+        height: clamp(2em, 5.2vw, $max-size);
+        padding: 1em;
+        @include flex-center;
+        border: 1px solid $clr-300;
+        border-radius: 50%;
+        color: $clr-500;
+    }
+
+    &:hover p {
+        color: $clr-accent-400;
+    }
+}
+
+.checkoutpage__form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.checkoutpage__buttons {
+    display: flex;
+    gap: 0.5em;
+    margin-top: 4em;
+}
+
+@media (min-width: 556px) {
+    .checkoutpage__nav-list {
+        display: flex;
+        flex-direction: row;
+    }
+}
+
+@media (min-width: 1058px) {
+    .checkoutpage__content {
+        flex-direction: row;
+        gap: 0;
+    }
+    
+    .checkoutpage__nav-list {
+        @include flex-col;
+    }
+}
+

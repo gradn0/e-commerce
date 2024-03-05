@@ -1,0 +1,20 @@
+.checkoutoptions__left, .checkoutoptions__right {
+    @include flex-col;
+    margin-inline: 0.5em;
+
+    input {
+        margin-bottom: 1.5em;
+        color: $clr-500;
+    }
+}
+
+.addressoptions, 
+.paymentoptions {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+@media (min-width: 575px) {
+
+}

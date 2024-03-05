@@ -3,6 +3,8 @@
     padding: 1em;
     @include flex-col;
     gap: 1em;
+    min-height: 7em;
+    justify-content: center;
 
     button {
         max-width: 10em
@@ -10,10 +12,10 @@
 }
 
 .checkoutsummary__contribution {
-    font-size: $fs-sm;
+    font-size: clamp($fs-xs, 2.5vw, $fs-sm);
 }
 
 .checkoutsummary__total {
-    font-size: $fs-lg;
+    font-size: clamp($fs-base, 2.5vw, $fs-lg);
     font-weight: $fw-bold;
 }

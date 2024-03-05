@@ -23,3 +23,9 @@
     width: min($max-container-width, 100% - $container-padding*2);
     margin-inline: auto;
 }
+
+.text-logo {
+    cursor: pointer;
+    font-weight: bold;
+    font-size: $fs-2xl;
+}

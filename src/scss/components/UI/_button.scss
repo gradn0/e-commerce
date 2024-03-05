@@ -2,11 +2,10 @@
     padding: 0.5em;
     background-color: $clr-accent-400;
     color: $clr-dark;
-    border: 2px solid $clr-light;
+    border: 2px solid $clr-accent-400;
     cursor: pointer;
 
     &:hover {
         background-color: $clr-light;
-        border: 2px solid $clr-accent-400;
     }
 }

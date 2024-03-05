@@ -1,4 +1,10 @@
 .basketpage {
+    margin-top: 2em;
+    @include flex-col;
+    gap: 2em;
+}
+
+.basketpage-grid {
     display: grid;
     justify-content: center;
     gap: 1em;
@@ -12,8 +18,18 @@
 .basketpage__products-list {
     @include flex-col;
     gap: 1em;
+
+    p {
+        opacity: 0.6;
+        font-size: $fs-body;
+    }
 }
 
 .basketpage__summary {
     max-width: 20em; 
+
+    button {
+        margin-top: 1em;
+        
+    }
 } 

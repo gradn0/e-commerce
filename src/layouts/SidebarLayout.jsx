@@ -11,7 +11,7 @@ const SidebarLayout = ({
     return (
         <>
         <div className='sidebarlayout__header'>
-            <Header toggleSidebar={() => setMobileSideOpen(!mobileSideOpen)}/>
+            <Header toggleSidebar={() => setMobileSideOpen(!mobileSideOpen)} displayMobileMenu={true}/>
         </div>
         <div className='sidebarlayout__container'>
             <Media query='(min-width: 70em)' render={() =>  

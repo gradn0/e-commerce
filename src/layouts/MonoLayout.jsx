@@ -5,7 +5,7 @@ const MonoLayout = ({children}) => {
   return (
     <>
     <div style={{height: '12vh'}}>
-        <Header />
+        <Header displayMobileMenu={false}/>
     </div>   
     <div style={{display: 'flex', height: '88vh'}}>
         {children}
