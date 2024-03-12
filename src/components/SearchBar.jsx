@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import useFetch from '../hooks/useFetch';
 import ModalLayout from '../layouts/ModalLayout';
 import { Link } from 'react-router-dom';
+import {BASE_URL} from '../globalVars';
 
 const SearchBar = ({linkClicked}) => {
   const [query, setQuery] = useState('');
@@ -28,7 +29,7 @@ const SearchBar = ({linkClicked}) => {
         {query.length>0 && displayResults && (
         <div className='searchbar__results'>
           <ModalLayout>
-            {results.map(item => <div className="searchbar__result" key={item.id}><Link onClick={() => {handleClickLink()}} to={`/product/${item.id}`}>{item.title}</Link></div>)}
+            {results.map(item => <div className="searchbar__result" key={item.id} onClick={() => {handleClickLink()}}><Link to={`${BASE_URL}/product/${item.id}`}>{item.title}</Link></div>)}
           </ModalLayout>
         </div>
         )}

@@ -3,6 +3,9 @@ import AddressOptions from './checkout/AddressOptions';
 import PaymentOptions from './checkout/PaymentOptions';
 import PlaceOrder from './checkout/PlaceOrder';
 import { useNavigate } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
+import { clearBasket } from '../state/basket/basketSlice';
+import { BASE_URL } from '../globalVars';
 
 const CheckoutPage = () => {  
   const steps = [
@@ -22,6 +25,12 @@ const CheckoutPage = () => {
 
   const [currentStep, setCurrentStep] = useState(0);
   const navigate = useNavigate();
+  const dispatch = useDispatch();
+
+  const placeOrder = () => {
+    navigate(`${BASE_URL}/checkout/success`);
+    dispatch(clearBasket());
+  }
 
   return (
     <div className='checkoutpage | container'>
@@ -49,7 +58,7 @@ const CheckoutPage = () => {
                 Next
               </button>}
 
-              {currentStep === steps.length-1 && <button onClick={() => navigate('/checkout/success')} className='btn'>
+              {currentStep === steps.length-1 && <button onClick={() => placeOrder()} className='btn'>
                 Place Order
               </button>}
 

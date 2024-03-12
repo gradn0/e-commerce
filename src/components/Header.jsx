@@ -7,6 +7,7 @@ import MobileMenuIcon from './UI/MobileMenuIcon'
 import Media from 'react-media'
 import SearchIcon from './UI/SearchIcon'
 import ModalLayout from '../layouts/ModalLayout'
+import {BASE_URL} from '../globalVars'
 
 const Header = ({toggleSidebar, displayMobileMenu}) => {
   const [searchBarOpen, setSearchBarOpen] = useState(false);
@@ -14,7 +15,7 @@ const Header = ({toggleSidebar, displayMobileMenu}) => {
   return (
     <div className='header'>
         {displayMobileMenu && <Media query='(max-width: 70em)' render={() => <a onClick={toggleSidebar}><MobileMenuIcon style={{width: '1.5em', height: '1.5em', cursor: 'pointer'}}/></a>}/>}
-        <Link to={'/'}><Logo /></Link>
+        <Link to={`${BASE_URL}/`}><Logo /></Link>
 
         {displayMobileMenu && <Media queries={{
             mobile: '(max-width: 592px)',
@@ -38,7 +39,7 @@ const Header = ({toggleSidebar, displayMobileMenu}) => {
         </ModalLayout>}
 
         <ul className='header__links' style={{display: 'flex', gap: '2em'}}>
-          <Link to={'/basket'}><BasketIcon /></Link>
+          <Link to={`${BASE_URL}/basket`}><BasketIcon /></Link>
         </ul>
 
     </div>

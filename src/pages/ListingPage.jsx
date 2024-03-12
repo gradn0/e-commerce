@@ -1,6 +1,7 @@
 import { Link, useParams } from 'react-router-dom'
 import useFetch from '../hooks/useFetch';
 import ProductCard from '../components/ProductCard';
+import {BASE_URL} from '../globalVars';
 
 const ListingPage = () => {
   const params = useParams();
@@ -9,7 +10,7 @@ const ListingPage = () => {
   return (
     <div className='layout-grid' style={{gap: '1em'}}>
       {listing && listing.products.map((item => 
-        <Link key={item.id} to={`/product/${item.id}`}><ProductCard product={item}/></Link>
+        <Link key={item.id} to={`${BASE_URL}/product/${item.id}`}><ProductCard product={item}/></Link>
       ))}
     </div>
   )

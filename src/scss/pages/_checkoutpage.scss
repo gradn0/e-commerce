@@ -78,7 +78,7 @@
 @media (min-width: 556px) {
     .checkoutpage__nav-list {
         display: flex;
-        flex-direction: row;
+        flex-direction: row;      
     }
 }
 
@@ -90,6 +90,7 @@
     
     .checkoutpage__nav-list {
         @include flex-col;
+        margin-top: 4em;
     }
 }
 

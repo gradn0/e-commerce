@@ -1,4 +1,0 @@
-attributions: 
-<a href="https://www.flaticon.com/free-icons/visa" title="visa icons">Visa icons created by Pixel Buddha - Flaticon</a>
-<a href="https://www.flaticon.com/free-icons/mastercard" title="mastercard icons">Mastercard icons created by Roundicons Premium - Flaticon</a>
-<a href="https://www.flaticon.com/free-icons/amex" title="amex icons">Amex icons created by Pixel Buddha - Flaticon</a>

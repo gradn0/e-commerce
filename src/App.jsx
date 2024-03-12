@@ -12,56 +12,53 @@ import ProductPage from "./pages/ProductPage"
 import BasketPage from "./pages/BasketPage"
 import MonoLayout from "./layouts/MonoLayout"
 import CheckoutPage from "./pages/CheckoutPage"
-
-import AddressOptions from "./pages/checkout/AddressOptions";
-import PaymentOptions from "./pages/checkout/PaymentOptions";
-import PlaceOrder from "./pages/checkout/PlaceOrder";
 import CheckoutSuccessPage from "./pages/CheckoutSuccessPage"
+import {BASE_URL} from './globalVars'
 
 function App() {
   const router = createBrowserRouter([
     {
-      path: '/', 
+      path: `${BASE_URL}/`, 
       element: <SidebarLayout left={Categories} right={ListingPage} />,
       errorElement: <ErrorBoundary />,
     },
     {
-      path: '/category',
+      path: `${BASE_URL}/category`,
       element:<SidebarLayout left={Categories} right={ListingPage} />,
     },
     {
-      path: '/category/:category',
+      path: `${BASE_URL}/category/:category`,
       element:<SidebarLayout left={Categories} right={ListingPage} />,
     },
     {
-      path: '/product/:productId',
+      path: `${BASE_URL}/product/:productId`,
       element:<SidebarLayout left={Categories} right={ProductPage} />,
     },
     {
-      path: '/login',
+      path: `${BASE_URL}/login`,
       element: <LoginPage />,
     },
     {
-      path: '/register',
+      path: `${BASE_URL}/register`,
       element: <RegisterPage />,
     },
     {
-      path: '/basket',
+      path: `${BASE_URL}/basket`,
       element: <MonoLayout><BasketPage /></MonoLayout>
     },
     {
-      path: '/checkout',
+      path: `${BASE_URL}/checkout`,
       element: <MonoLayout><CheckoutPage /></MonoLayout>,
     },
     {
-      path: '/checkout/success',
+      path: `${BASE_URL}/checkout/success`,
       element: <MonoLayout><CheckoutSuccessPage /></MonoLayout>,
     }
   ])
 
   return (
     <div>
-      <RouterProvider router={router} />
+      <RouterProvider  router={router} />
     </div>
   )
 }

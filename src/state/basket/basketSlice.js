@@ -33,10 +33,15 @@ export const basketSlice = createSlice({
             item.count = action.payload.newCount; //update item count
             state.itemCount += item.count;
             state.totalCost += item.product.price * item.count; //update cost contribution
+        },
+        clearBasket: (state) => {
+            state.products = [];
+            state.itemCount = 0;
+            state.totalCost = 0;
         }
     }
 })
 
-export const {addProduct, removeProduct, incrementCount, updateCount} = basketSlice.actions;
+export const {addProduct, removeProduct, incrementCount, updateCount, clearBasket} = basketSlice.actions;
 export default basketSlice.reducer;
 

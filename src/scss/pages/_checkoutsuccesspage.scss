@@ -1,0 +1,14 @@
+.checkoutsuccess {
+    @include flex-center;
+    flex-direction: column;
+    gap: 2em;
+
+    h1 {
+        color: $clr-dark;
+        font-size: $fs-3xl;
+    }
+
+    img {
+        margin-bottom: 2em;
+    }
+}
