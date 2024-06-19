@@ -5,7 +5,6 @@ import PlaceOrder from './checkout/PlaceOrder';
 import { useNavigate } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import { clearBasket } from '../state/basket/basketSlice';
-import { BASE_URL } from '../globalVars';
 
 const CheckoutPage = () => {  
   const steps = [
@@ -28,7 +27,7 @@ const CheckoutPage = () => {
   const dispatch = useDispatch();
 
   const placeOrder = () => {
-    navigate(`${BASE_URL}/checkout/success`);
+    navigate(`/checkout/success`);
     dispatch(clearBasket());
   }
 

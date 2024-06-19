@@ -13,48 +13,49 @@ import BasketPage from "./pages/BasketPage"
 import MonoLayout from "./layouts/MonoLayout"
 import CheckoutPage from "./pages/CheckoutPage"
 import CheckoutSuccessPage from "./pages/CheckoutSuccessPage"
-import {BASE_URL} from './globalVars'
 
 function App() {
   const router = createBrowserRouter([
     {
-      path: `${BASE_URL}/`, 
+      path: `/`, 
       element: <SidebarLayout left={Categories} right={ListingPage} />,
       errorElement: <ErrorBoundary />,
     },
     {
-      path: `${BASE_URL}/category`,
+      path: `/category`,
       element:<SidebarLayout left={Categories} right={ListingPage} />,
     },
     {
-      path: `${BASE_URL}/category/:category`,
+      path: `/category/:category`,
       element:<SidebarLayout left={Categories} right={ListingPage} />,
     },
     {
-      path: `${BASE_URL}/product/:productId`,
+      path: `/product/:productId`,
       element:<SidebarLayout left={Categories} right={ProductPage} />,
     },
     {
-      path: `${BASE_URL}/login`,
+      path: `/login`,
       element: <LoginPage />,
     },
     {
-      path: `${BASE_URL}/register`,
+      path: `/register`,
       element: <RegisterPage />,
     },
     {
-      path: `${BASE_URL}/basket`,
+      path: `/basket`,
       element: <MonoLayout><BasketPage /></MonoLayout>
     },
     {
-      path: `${BASE_URL}/checkout`,
+      path: `/checkout`,
       element: <MonoLayout><CheckoutPage /></MonoLayout>,
     },
     {
-      path: `${BASE_URL}/checkout/success`,
+      path: `/checkout/success`,
       element: <MonoLayout><CheckoutSuccessPage /></MonoLayout>,
     }
-  ])
+  ], {
+    basename: "/e-commerce"
+  })
 
   return (
     <div>

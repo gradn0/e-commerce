@@ -1,6 +1,5 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import {BASE_URL} from '../globalVars'
 
 const RegisterPage = () => {
   return (
@@ -12,7 +11,7 @@ const RegisterPage = () => {
                 <input className='text-input' type="text" placeholder='Password'/>
                 <button className='btn'>Sign up</button>
             </form>
-            <Link to={`${BASE_URL}/login`} className='text-body'><p>Login</p></Link>
+            <Link to={`/login`} className='text-body'><p>Login</p></Link>
         </div>
     </div>
   )

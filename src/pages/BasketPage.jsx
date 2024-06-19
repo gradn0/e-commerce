@@ -4,7 +4,6 @@ import BasketItem from '../components/UI/BasketItem'
 import { updateCount, removeProduct } from '../state/basket/basketSlice'
 import CheckoutSummary from '../components/CheckoutSummary'
 import { useNavigate } from 'react-router-dom'
-import {BASE_URL} from '../globalVars';
 
 const BasketPage = () => {
     const products = useSelector((state) => state.basket.products);
@@ -31,7 +30,7 @@ const BasketPage = () => {
         <div className="basketpage__summary">
           {products.length > 0 && <>
             <CheckoutSummary totalCost={totalCost}/>
-            <button onClick={() => navigate(`${BASE_URL}/checkout`)} className='btn'>Checkout</button>
+            <button onClick={() => navigate(`/checkout`)} className='btn'>Checkout</button>
           </>}
         </div>
       </div>
